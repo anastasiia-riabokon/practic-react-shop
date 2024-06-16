@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import css from "./Modal.module.css";
 import {IoMdClose} from "react-icons/io";
+import {motion, AnimatePresence} from "framer-motion";
 
 export const Modal = ({children, title = "Default modal", onClose}) => {
   useEffect(() => {
@@ -26,13 +27,18 @@ export const Modal = ({children, title = "Default modal", onClose}) => {
   }, []);
   return (
     <div onClick={handleBackdropClick} className={css.wrapper}>
-      <div className={css.content}>
+      <motion.div
+        initial={{opacity: 0, y: 400}}
+        animate={{opacity: 1, y: 0, transition: {duration: 0.5, type: "spring"}}}
+        exit={{opacity: 0, y: 400, transition: {duration: 0.5}, scale: 0.5}}
+        className={css.content}
+      >
         <h1>{title}</h1>
         <button className={css.btn} onClick={onClose}>
           <IoMdClose />
         </button>
         {children}
-      </div>
+      </motion.div>
     </div>
   );
 };
