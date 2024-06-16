@@ -29,7 +29,7 @@ export const StoreApp = () => {
       <List products={products} addToCart={addToCart} />
       <AnimatePresence>
         {isOpen && (
-          <Modal onClose={toggleModal}>
+          <Modal title="Cart" onClose={toggleModal}>
             <Cart cart={cart} removeFromCart={removeFromCart} />
           </Modal>
         )}
