@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import css from "./Modal.module.css";
+import {IoMdClose} from "react-icons/io";
 
 export const Modal = ({children, title = "Default modal", onClose}) => {
   useEffect(() => {
@@ -28,7 +29,7 @@ export const Modal = ({children, title = "Default modal", onClose}) => {
       <div className={css.content}>
         <h1>{title}</h1>
         <button className={css.btn} onClick={onClose}>
-          x
+          <IoMdClose />
         </button>
         {children}
       </div>

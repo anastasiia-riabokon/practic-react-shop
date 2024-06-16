@@ -29,6 +29,8 @@
 
   border-radius: 50%;
   background-color: #98f1cc;
-  padding: 4px 8px;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
 }
