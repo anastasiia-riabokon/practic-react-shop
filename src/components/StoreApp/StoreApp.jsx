@@ -25,7 +25,7 @@ export const StoreApp = () => {
           Cart
         </button>
       </header>
-      <List products={products} />
+      <List products={products} addToCart={addToCart} />
       <AnimatePresence>
         {isOpen && (
           <Modal onClose={toggleModal}>
