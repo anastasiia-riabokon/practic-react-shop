@@ -44,7 +44,7 @@
 
     li {
       display: grid;
-      grid-template-columns: 200px 2fr 1fr 1fr;
+      grid-template-columns: 200px 2fr 1fr 1fr 1fr;
       align-items: center;
     }
   }
