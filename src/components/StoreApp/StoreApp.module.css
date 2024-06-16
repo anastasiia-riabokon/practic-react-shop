@@ -35,3 +35,17 @@
     margin: 0 auto;
   }
 }
+
+.cart {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      display: grid;
+      grid-template-columns: 200px 2fr 1fr 1fr;
+      align-items: center;
+    }
+  }
+}

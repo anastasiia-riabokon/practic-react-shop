@@ -5,6 +5,7 @@ import List from "./List";
 import Modal from "../Modal/Modal";
 import css from "./StoreApp.module.css";
 import {AnimatePresence} from "framer-motion";
+import Cart from "./Cart";
 
 export const StoreApp = () => {
   const [products, setProducts] = useLocalStorage("products", productsData);
@@ -29,9 +30,7 @@ export const StoreApp = () => {
       <AnimatePresence>
         {isOpen && (
           <Modal onClose={toggleModal}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates veniam
-            reprehenderit nisi omnis, rerum qui molestias voluptatem, repellat sed laboriosam minus,
-            eligendi dolorem animi ullam accusantium. Qui ad accusamus corporis.
+            <Cart cart={cart} removeFromCart={removeFromCart} />
           </Modal>
         )}
       </AnimatePresence>
